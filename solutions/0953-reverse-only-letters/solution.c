@@ -7,15 +7,10 @@ char* reverseOnlyLetters(char* s) {
     }
     idx--;
     while(i < idx){
-        if(*(s + i) >= 'a' && *(s + i) <= 'z'|| *(s + i) >= 'A' && *(s + i) <= 'Z'){
-            
-        
+        if(*(s + i) >= 'a' && *(s + i) <= 'z'|| *(s + i) >= 'A' && *(s + i) <= 'Z')
+        {
             if(*(s + idx) >= 'a' && *(s + idx) <= 'z' || *(s + idx) >= 'A' && *(s + idx) <= 'Z')
             {
-             /*   *(s + i) ^= *(s + idx);
-                *(s + idx) ^= *(s + i);
-                *(s + i) ^= *(s + idx);
-                */
                 char temp = *(s + i);
                 *(s + i) = *(s + idx);
                 *(s + idx) = temp;
