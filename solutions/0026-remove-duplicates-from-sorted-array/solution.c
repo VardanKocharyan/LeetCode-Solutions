@@ -5,7 +5,7 @@ int removeDuplicates(int* nums, int numsSize)
     {
         return 0;
     }
-    for(int i = 1 ; i< numsSize ; i++)
+    for(int i = 1 ; i < numsSize ; i++)
     {
         if(nums[i] != nums[i - 1])
         {
