@@ -30,13 +30,10 @@ int romanToInt(char* s) {
         if( a < b ){
             sum += - (a - b);
             ++i;
-            printf("if");
         }
         else{
             sum += a; 
-            printf("else");
         }
-        printf("%d \n" , sum);
     }
     return sum ;
 }
