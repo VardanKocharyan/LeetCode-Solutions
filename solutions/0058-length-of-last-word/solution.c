@@ -1,7 +1,7 @@
 int lengthOfLastWord(char* s) {
     int count = 0;
     int len = 0;
-    while(*s != '\0')
+    while(*s)
     {
         s++;
         len++;
@@ -13,7 +13,7 @@ int lengthOfLastWord(char* s) {
         s--;
         len--;
     }
-    while(len >= 0 && *s != ' ' && *s != '\0')
+    while(len >= 0 && *s != ' ' && *s )
     {
         count++;
         s--;
