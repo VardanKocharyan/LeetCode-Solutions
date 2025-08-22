@@ -3,28 +3,26 @@ char* reverseOnlyLetters(char* s) {
     int i = 0;
     while(*(s + idx) != '\0')
     {
-        idx++;
+        ++idx;
     }
-    idx--;
+
+    --idx;
+    
     while(i < idx){
-        if(*(s + i) >= 'a' && *(s + i) <= 'z'|| *(s + i) >= 'A' && *(s + i) <= 'Z')
-        {
-            if(*(s + idx) >= 'a' && *(s + idx) <= 'z' || *(s + idx) >= 'A' && *(s + idx) <= 'Z')
-            {
+        if (*(s + i) >= 'a' && *(s + i) <= 'z'|| *(s + i) >= 'A' && *(s + i) <= 'Z') {
+            if (*(s + idx) >= 'a' && *(s + idx) <= 'z' || *(s + idx) >= 'A' && *(s + idx) <= 'Z') {
                 char temp = *(s + i);
                 *(s + i) = *(s + idx);
                 *(s + idx) = temp;
-                i++;
-                idx--;
+                ++i;
+                --idx;
             }
-            else
-            {
-                idx--;
+            else {
+                --idx;
             }
         }
-        else
-        {
-            i++;
+        else {
+            ++i;
         }
     }
     return s;
