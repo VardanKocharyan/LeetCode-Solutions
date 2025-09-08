@@ -1,6 +1,5 @@
 bool isPalindrome(int x) {
-    int y = x;
-    long int z = 0;
+    long long int z = 0;
 
     if(x < 0 || (x % 10 == 0 && x != 0)){
         return false;
