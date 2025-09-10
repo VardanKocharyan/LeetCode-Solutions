@@ -1,26 +1,31 @@
 int maximumProduct(int* nums, int numsSize) {
-    int res1 = 1;
-    int res2 = 1;
-    for(int i = 0; i < 3; ++i) {
-        for(int j = i + 1; j < numsSize; ++j) {
-            if (nums[i] < nums[j] && nums[i] != nums[j]) {
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
-            }
+    int a = INT_MIN;
+    int b = INT_MIN;
+    int c = INT_MIN;
+    int d = INT_MAX;
+    int e = INT_MAX;
+
+    for(int i = 0; i < numsSize; ++i) {
+        if (a < nums[i]) {
+            c = b;
+            b = a;
+            a = nums[i];
         }
-        res1 *= nums[i]; 
-    }
-    res2 *= nums[0];
-    for(int i = 0; i < 2; ++i) {
-        for(int j = i + 1; j < numsSize; ++j) {
-            if (nums[i] > nums[j] && nums[i] != nums[j]) {
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
-            }
+        else if (b < nums[i]) {
+            c = b;
+            b = nums[i];
         }
-        res2 *= nums[i]; 
+        else if (c < nums[i]) c = nums[i];
+
+        if (d > nums[i]) {
+            e = d;
+            d = nums[i];
+        }
+        else if (e > nums[i]) e = nums[i];
     }
-    return (res1 > res2) ? res1 : res2;
+
+    d *= e * a;
+    a *= b * c;
+
+    return (a > d) ? a : d; 
 }
