@@ -19,8 +19,10 @@ int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
         ptr[i] = 0;
     }
     
-    if(count > 1) return ptr;
-    if(count == 1) {
+    if(count > 1) {
+         return ptr;
+    }
+    else if(count == 1) {
         ptr[idx] = product;
         return ptr;
     }
