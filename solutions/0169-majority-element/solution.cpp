@@ -14,8 +14,6 @@ public:
                     count = 1;
                 }
             }
-
-            if(count > n/2) break;
         }
         return val; 
     }
