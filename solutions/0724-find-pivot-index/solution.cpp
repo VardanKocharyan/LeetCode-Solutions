@@ -10,8 +10,6 @@ public:
             sum2 += nums[i];
         }
 
-        std::cout << std::endl;
-
         for (int i{1}; i < nums.size(); ++i) {
             if (sum1 == sum2) return i - 1;
             sum1 += nums[i - 1];
