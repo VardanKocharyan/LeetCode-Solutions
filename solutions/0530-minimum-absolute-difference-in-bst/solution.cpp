@@ -17,7 +17,7 @@ public:
 
         int min_l = getMinimumDifference(root->left);
 
-        if (prev && std::abs(prev->val - root->val) < min_l) min_l = std::abs(prev->val - root->val);
+        if (prev && root->val - prev->val < min_l) min_l = root->val - prev->val;
 
         prev = root;
 
