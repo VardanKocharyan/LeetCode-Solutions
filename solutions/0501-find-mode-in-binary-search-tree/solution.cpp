@@ -16,8 +16,6 @@ public:
         if (!n) return; 
         
         find(res, n->left, max, curry);
-        
-
 
         if (key != n->val) {
             key = n->val;
