@@ -16,6 +16,7 @@ public:
 
         return res;
     }
+    
     void makeAdj(std::vector<std::vector<int>>& edges, std::vector<std::vector<int>>& adj) {
         for (const std::vector<int>& e : edges) {
             int from = e[0] - 1;
@@ -37,7 +38,6 @@ public:
 
     int assignEdgeWeights(vector<vector<int>>& edges) {
         int n = edges.size() + 1;
-        const int Mod = 1e9 + 7;
         std::vector<std::vector<int>> adj(n);
         makeAdj(edges, adj);
 
