@@ -17,3 +17,5 @@ jobs:
           leetcode-csrf-token: ${{ secrets.LEETCODE_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           destination-folder: solutions
+          commit-author-name: "VardanKocharyan"
+          commit-author-email: "vardanqocharyan5@gmail.com"
