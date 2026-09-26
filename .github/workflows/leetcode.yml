@@ -3,11 +3,14 @@ name: Sync LeetCode Submissions
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 8 * * *' 
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write 
 
     steps:
       - name: Run LeetCode Sync
@@ -18,4 +21,4 @@ jobs:
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           destination-folder: solutions
           commit-author-name: "VardanKocharyan"
-          commit-author-email: "vardanqocharyan5@gmail.com"
+          commit-author-email: "202343946+VardanKocharyan@users.noreply.github.com"
